@@ -14,7 +14,7 @@ module states {
         public game: createjs.Container;
         public scoreboard: objects.ScoreBoard;
         public plane: objects.Plane;
-        public island: objects.Island
+        public island: objects.Island;
         public clouds: objects.Cloud[] = [];
         public ocean: objects.Ocean;
 
@@ -31,7 +31,6 @@ module states {
             this.island = new objects.Island();
             this.game.addChild(this.island);
 
-
             //Plane object
             this.plane = new objects.Plane();
             this.game.addChild(this.plane);
@@ -41,6 +40,7 @@ module states {
                 this.clouds[cloud] = new objects.Cloud();
                 this.game.addChild(this.clouds[cloud]);
             }
+            
 
 
             // Instantiate Scoreboard
@@ -86,13 +86,15 @@ module states {
             this.island.update();
 
             this.plane.update();
-
+            
             for (var cloud = 2; cloud >= 0; cloud--) {
                 this.clouds[cloud].update();
 
                 this.checkCollision(this.clouds[cloud]);
             }
-
+           
+            
+                
             this.checkCollision(this.island);
 
 
