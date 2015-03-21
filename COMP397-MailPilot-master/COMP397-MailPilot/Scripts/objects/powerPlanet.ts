@@ -2,11 +2,11 @@
 
 module objects {
     // ISLAND CLASS
-    export class Island extends objects.GameObject{
-        
+    export class PowerPlanet extends objects.GameObject {
+
         // CONSTRUCTOR
         constructor() {
-            super("island");
+            super("powerPlanet");
             this.sound = "yay";
             this._dx = 5;
 
@@ -22,7 +22,6 @@ module objects {
 
         // Reset position of island to the top
         public reset() {
-            this.visible = true;
             this.x = 1000 + this.width;
             this.y = Math.floor(Math.random() * 430);
             /*
@@ -34,7 +33,7 @@ module objects {
         // PRIVATE METHODS +++++++++++++++++++++++++++++++++++++++++
         private _checkBounds() {
             // check if island has left the bottom of the screen
-            if (this.x <= (0- this.width)) {
+            if (this.x <= (0 - this.width - 5000)) {
                 this.reset();
             }
 
@@ -47,4 +46,4 @@ module objects {
 
     }
 
-} 
+}  

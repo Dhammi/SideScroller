@@ -1,4 +1,6 @@
-﻿/// <reference path="typings/createjs-lib/createjs-lib.d.ts" />
+﻿/// Vineet Dhammi | 300808585 | Last Modified: 20/03/2015 
+
+/// <reference path="typings/createjs-lib/createjs-lib.d.ts" />
 /// <reference path="typings/easeljs/easeljs.d.ts" />
 /// <reference path="typings/tweenjs/tweenjs.d.ts" />
 /// <reference path="typings/soundjs/soundjs.d.ts" />
@@ -50,6 +52,8 @@ var manifest = [
     { id: "tryAgainButton", src: "assets/images/playAgainButton.png" },
     { id: "instructionsLogo", src: "assets/images/instructionsLogo.png" },
     { id: "instruction", src: "assets/images/instructions.png" },
+    { id: "powership", src: "assets/images/powership.png" },
+    { id: "powerPlanet", src: "assets/images/powerPlanet.png" },
     { id: "engine", src: "assets/audio/star.ogg" },
     { id: "yay", src: "assets/audio/powerup.wav" },
     { id: "thunder", src: "assets/audio/collision.wav" }

@@ -1,4 +1,6 @@
-﻿﻿module constants {
+﻿/// Vineet Dhammi | 300808585 | Last Modified: 20/03/2015 
+
+﻿module constants {
     // State Machine Constants
     export var MENU_STATE: number = 0;
     export var PLAY_STATE: number = 1;

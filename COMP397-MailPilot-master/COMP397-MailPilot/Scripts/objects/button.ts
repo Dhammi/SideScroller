@@ -1,4 +1,6 @@
-﻿/// <reference path="../constants.ts" />
+﻿/// Vineet Dhammi | 300808585 | Last Modified: 20/03/2015 
+
+/// <reference path="../constants.ts" />
 
 module objects {
     // BUTTON CLASS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

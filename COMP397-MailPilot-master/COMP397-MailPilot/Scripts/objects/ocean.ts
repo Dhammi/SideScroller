@@ -1,4 +1,6 @@
-﻿module objects {
+﻿/// Vineet Dhammi | 300808585 | Last Modified: 20/03/2015 
+
+module objects {
     // OCEAN CLASS
     export class Ocean extends createjs.Bitmap {
         // PUBLIC INSTANCE VARIABLES

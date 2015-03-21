@@ -7,38 +7,34 @@ var __extends = this.__extends || function (d, b) {
 };
 var objects;
 (function (objects) {
-    // CLOUD CLASS
-    var Cloud = (function (_super) {
-        __extends(Cloud, _super);
+    // ISLAND CLASS
+    var PowerPlanet = (function (_super) {
+        __extends(PowerPlanet, _super);
         // CONSTRUCTOR
-        function Cloud() {
-            _super.call(this, "cloud");
-            this.sound = "thunder";
+        function PowerPlanet() {
+            _super.call(this, "powerPlanet");
+            this.sound = "yay";
+            this._dx = 5;
             this.reset();
         }
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++
-        Cloud.prototype.update = function () {
-            this.y += this._dy;
+        PowerPlanet.prototype.update = function () {
             this.x -= this._dx;
             this._checkBounds();
         };
         // Reset position of island to the top
-        Cloud.prototype.reset = function () {
+        PowerPlanet.prototype.reset = function () {
+            this.x = 1000 + this.width;
+            this.y = Math.floor(Math.random() * 430);
             /*
             this.y = -this.height;
             this.x = Math.floor(Math.random() * 640);
-            this._dy = Math.floor(Math.random() * 5) + 5;
-            this._dx = Math.floor(Math.random() * 4) - 2;
             */
-            this.x = 1000 + this.width;
-            this.y = Math.floor(Math.random() * 400);
-            this._dx = Math.floor(Math.random() * 5) + 5;
-            this._dy = Math.floor(Math.random() * 5) - 2;
         };
         // PRIVATE METHODS +++++++++++++++++++++++++++++++++++++++++
-        Cloud.prototype._checkBounds = function () {
+        PowerPlanet.prototype._checkBounds = function () {
             // check if island has left the bottom of the screen
-            if (this.x <= (0 - this.width)) {
+            if (this.x <= (0 - this.width - 5000)) {
                 this.reset();
             }
             /*
@@ -47,8 +43,8 @@ var objects;
             }
             */
         };
-        return Cloud;
+        return PowerPlanet;
     })(objects.GameObject);
-    objects.Cloud = Cloud;
+    objects.PowerPlanet = PowerPlanet;
 })(objects || (objects = {}));
-//# sourceMappingURL=cloud.js.map
+//# sourceMappingURL=powerPlanet.js.map

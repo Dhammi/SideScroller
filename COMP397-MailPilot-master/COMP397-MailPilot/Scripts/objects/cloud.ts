@@ -1,4 +1,6 @@
-﻿module objects {
+﻿/// Vineet Dhammi | 300808585 | Last Modified: 20/03/2015 
+
+module objects {
     // CLOUD CLASS
     export class Cloud extends objects.GameObject {
 

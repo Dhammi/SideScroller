@@ -1,4 +1,3 @@
-/// Vineet Dhammi | 300808585 | Last Modified: 20/03/2015 
 var __extends = this.__extends || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -8,11 +7,11 @@ var __extends = this.__extends || function (d, b) {
 var objects;
 (function (objects) {
     // PLANE CLASS
-    var Plane = (function (_super) {
-        __extends(Plane, _super);
+    var PowerShip = (function (_super) {
+        __extends(PowerShip, _super);
         // CONSTRUCTOR
-        function Plane() {
-            _super.call(this, assetLoader.getResult("plane"));
+        function PowerShip() {
+            _super.call(this, assetLoader.getResult("powerShip"));
             this.width = this.getBounds().width;
             this.height = this.getBounds().height;
             this.y = 220;
@@ -22,12 +21,12 @@ var objects;
             createjs.Sound.play("engine", { loop: -1 });
         }
         // PUBLIC METHODS
-        Plane.prototype.update = function () {
+        PowerShip.prototype.update = function () {
             this.x = stage.mouseX;
             this.y = stage.mouseY;
         };
-        return Plane;
+        return PowerShip;
     })(createjs.Bitmap);
-    objects.Plane = Plane;
+    objects.PowerShip = PowerShip;
 })(objects || (objects = {}));
-//# sourceMappingURL=plane.js.map
+//# sourceMappingURL=powerShip.js.map
