@@ -22,6 +22,7 @@ module objects {
 
         // Reset position of island to the top
         public reset() {
+            this.visible = true;
             this.x = 1000 + this.width;
             this.y = Math.floor(Math.random() * 430);
             /*
